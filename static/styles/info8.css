@@ -1,0 +1,317 @@
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.top {
+  width: 84%;
+  height: 80px;
+  left: 8%;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  margin: 0;
+}
+
+.backg {
+  background-color: #E5E5E5;
+  height: 100%;
+}
+
+.lycAvatar {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  background: #000000 no-repeat;
+  background-image: url('/static/images/hse_lyc.png');
+  background-size: 50px 50px;
+  left: 9%;
+  top: 15px;
+}
+
+.inf {
+  position: fixed;
+  top: 15px;
+  right: 25%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: #000000 no-repeat;
+  background-image: url('/static/images/info.png');
+  background-size: 50px 50px;
+}
+
+.inf:hover {
+  width: 60px;
+  height: 80px;
+  top: 0;
+  background-image: url('/static/images/info_chosen.png');
+  background-size: 60px 80px;
+}
+
+.clc:hover {
+  width: 60px;
+  height: 80px;
+  top: 0;
+  background-image: url('/static/images/calculator_chosen.png');
+  background-size: 60px 80px;
+}
+
+.cal:hover {
+  width: 60px;
+  height: 80px;
+  top: 0;
+  background-image: url('/static/images/calendar_chosen.png');
+  background-size: 60px 80px;
+}
+
+.fac:hover {
+  width: 60px;
+  height: 80px;
+  top: 0;
+  background-image: url('/static/images/facultatives_chosen.png');
+  background-size: 60px 80px;
+}
+
+.main {
+  position: fixed;
+  top: 80px;
+  width: 84%;
+  margin: auto;
+  background-color: white;
+  left: 8%;
+  bottom: 0;
+}
+
+.fac {
+  position: fixed;
+  top: 15px;
+  right: 20%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: red;
+  background: #000000 no-repeat;
+  background-image: url('/static/images/facultatives.png');
+  background-size: 50px 50px;
+}
+
+.cal {
+  position: fixed;
+  top: 15px;
+  right: 15%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: red;
+  background: #000000 no-repeat;
+  background-image: url('/static/images/calendar.png');
+  background-size: 50px 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.clc {
+  position: fixed;
+  top: 15px;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: red;
+  background: #000000 no-repeat;
+  background-image: url('/static/images/calculator.png');
+  background-size: 50px 50px;
+}
+
+.greeting {
+  height: 80px;
+  color: white;
+  text-align: center;
+  margin-top: 23px;
+}
+
+a {
+  color: black;
+}
+
+.cont {
+  width: 90%;
+  margin-left: 7%;
+  padding-top: 50px;
+}
+
+.list {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.logot {
+  display: inline-block;
+  width: 10%;
+  padding-bottom: 10%;
+  background-color: black;
+  vertical-align: top;
+  background: #ffffff no-repeat;
+  background-image: url('/static/images/матэк.png');
+  background-size: 100%;
+  margin-right: -2px;
+}
+
+.logot2 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 5%;
+  background-color: black;
+  vertical-align: top;
+  background: #ffffff no-repeat;
+  background-image: url('/static/images/матэк1.png');
+  background-size: 750px 100px;
+}
+
+.texlog {
+  display: inline-block;
+  width: 55%;
+  margin-left: -5px;
+}
+
+.nav_item {
+  height: 30px;
+  background-color: #D5DFF4;
+  border: solid 1px #507BD0;
+  border-bottom: 0;
+  padding-top: 12px;
+  text-align: center;
+  border-left: 0;
+  border-right: 0;
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+.nav_item:hover {
+  background-color: #F5F8FF;
+}
+
+.nav_item3 {
+  height: 30px;
+  background-color: #F5F8FF;
+  border: solid 1px #507BD0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+.item1 {
+  height: 30px;
+  background-color: #507BD0;
+  border: solid 1px #507BD0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2vw;
+}
+
+.nav_item2 {
+  height: 30px;
+  background-color: #D5DFF4;
+  border: solid 1px #507BD0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+.nav_item2:hover {
+  background-color: #F5F8FF;
+}
+
+.a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 750;
+}
+
+.tex {
+  display: inline-block;
+  width: 100%;
+  background-color: #f1f3f9;
+  margin-top: -11px;
+  font-size: 1.1em;
+  overflow-y: scroll;
+  height: 455px;
+}
+
+article {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 110%;
+}
+
+.allign {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1824px) {
+  .main {
+    position: fixed;
+    top: 80px;
+    width: 55%;
+    margin: auto;
+    background-color: white;
+    left: 22.5%;
+    bottom: 0;
+  }
+  .top {
+    width: 54.6%;
+    height: 80px;
+    left: 22.7%;
+  }
+  .lycAvatar {
+    left: 24%;
+  }
+  .nav_item {
+    font-size: 0.8vw;
+  }
+  .nav_item3 {
+    font-size: 0.8vw;
+  }
+  .item1 {
+    font-size: 0.8vw;
+  }
+  .nav_item2 {
+    font-size: 0.8vw;
+  }
+  .navi {
+    right: 22%;
+  }
+  .inf {
+    right: 33%;
+  }
+  .fac {
+    right: 30%;
+  }
+  .clc {
+    right: 27%;
+  }
+  .cal {
+    right: 24%;
+  }
+}
