@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Event, Facultative
 
 def index(request):
     return render(request, 'index.html')
@@ -71,7 +72,10 @@ def info_10(request):
     return render(request, 'info10.html')
     
 def faculties_1(request):
-    return render(request, 'facultatives.html')
+
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'facultatives.html', {'facultatives': facultatives})
 
 def faculties_2(request):
     return render(request, 'faculties.html')

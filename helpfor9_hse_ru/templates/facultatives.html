@@ -20,6 +20,7 @@
     <div class="clc"></div>
   </header>
   <main>
+
     <div class="main">
       <div class="cont">
         <table>
@@ -28,27 +29,15 @@
             <th class="tk">Время, кабинет</th>
             <th class="pr">Преподаватель</th>
           </tr>
+          {% for facultative in facultatives %}
           <tr>
-            <td>Cинквейн от Кубрика</td>
-            <td>18:00, 401Х</td>
-            <td>Кубрик А.А.</td>
+            <td>{{facultative.name}}</td>
+            <td>{{facultative.info}}</td>
+            <td>{{facultative.teacher}}</td>
           </tr>
-          <tr>
-            <td class="b1">Сложные вопросы ЕГЭ</td>
-            <td>16:20, 204С</td>
-            <td>Борискина Ю.М</td>
-          </tr>
-          <tr>
-            <td>Apple</td>
-            <td>25.4</td>
-            <td>30.2</td>
-          </tr>
-          <tr>
-            <td>IBM</td>
-            <td>20.4</td>
-            <td>15.6</td>
-          </tr>
+          {% endfor%}
         </table>
+
         <div class="list">
           <nav class="nav">
             <ul class="nav_list">

@@ -6,14 +6,12 @@ class Administrator(models.Model):
     job = models.CharField(max_length=200)
 
 class Facultative(models.Model):
-    facultative_name = models.CharField(max_length=200)
-    facultative_date = models.DateField()
-    facultative_time = models.TimeField()
-    facultative_place = models.CharField(max_length=30) #краткое название здания
-    facultative_teacher = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
+    info = models.CharField(max_length=200)
+    teacher = models.CharField(max_length=200)
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=200)
-    event_date = models.DateField()
-    event_time = models.TimeField()
-    event_place = models.CharField(max_length=30)
+    name = models.CharField(max_length=200)
+    date = models.DateField()
+    time = models.TimeField()
+    place = models.CharField(max_length=30)
