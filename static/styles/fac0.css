@@ -147,8 +147,9 @@ table {
     font-size: 2vw;
     border-collapse: collapse;
     text-align: center;
-    width: 65%;
+    width: 80%;
     margin: 0 auto;
+    position: fixed;
 }
 
 tbody {
@@ -163,7 +164,7 @@ th {
 
 th, td {
     border-style: solid;
-    border-color: rgb(32, 24, 109);
+    border-color: #2660AC;
     font-size: 20px;
 }
 
