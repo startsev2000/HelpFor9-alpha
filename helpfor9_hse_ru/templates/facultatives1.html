@@ -31,9 +31,11 @@
           </tr>
           {% for facultative in facultatives %}
           <tr>
+            {% if facultative.department == "Словесность"%}
             <td>{{facultative.name}}</td>
             <td>{{facultative.info}}</td>
             <td>{{facultative.teacher}}</td>
+            {% endif %}
           </tr>
           {% endfor%}
         </table>
