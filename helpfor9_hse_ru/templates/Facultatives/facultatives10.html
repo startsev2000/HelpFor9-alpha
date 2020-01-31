@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" href="/static/styles/fac0.css" />
+  <script src="lib/script.js"></script>
+  <title>Список факультативов</title>
+</head>
+
+<body class="backg">
+  <header>
+    <div class="top">
+      <h2 class="greeting">Список факультативов</h2>
+    </div>
+    <div class="lycAvatar"></div>
+    <div class="inf"></div>
+    <div class="fac"></div>
+    <div class="cal"></div>
+    <div class="clc"></div>
+  </header>
+  <main>
+
+    <div class="main">
+      <div class="cont">
+        <table>
+          <tr>
+            <th class="fc">Факультатив</th>
+            <th class="tk">Время, кабинет</th>
+            <th class="pr">Преподаватель</th>
+          </tr>
+          {% for facultative in facultatives %}
+          <tr>
+            {% if facultative.department == "Общественные науки"%}
+            <td>{{facultative.name}}</td>
+            <td>{{facultative.info}}</td>
+            <td>{{facultative.teacher}}</td>
+            {% endif %}
+          </tr>
+          {% endfor%}
+        </table>
+
+        <div class="list">
+          <nav class="nav">
+            <ul class="nav_list">
+              <li class="item1"><a class="a" href="#">Выберите кафедру</a></li>
+              <li class="nav_item"><a class="a" href="vostok">Востоковедение</a></li>
+              <li class="nav_item"><a class="a" href="natscience">Естественные науки</a></li>
+              <li class="nav_item"><a class="a" href="foreign">Иностранные языки</a></li>
+              <li class="nav_item"><a class="a" href="computers">Информатика</a></li>
+              <li class="nav_item"><a class="a" href="research">Исследовательская и проектная деятельность</a></li>
+              <li class="nav_item"><a class="a" href="history">История</a></li>
+              <li class="nav_item"><a class="a" href="culthist">История культуры</a></li>
+              <li class="nav_item"><a class="a" href="math">Математика</a></li>
+              <li class="nav_item"><a class="a" href="mhk">МХК</a></li>
+              <li class="nav_item2"><a class="a" href="social">Общественные науки<a></li>
+              <li class="nav_item"><a class="a" href="psychology">Психология</a></li>
+              <li class="nav_item"><a class="a" href="words">Словесность</a></li>
+              <li class="nav_item"><a class="a" href="tok">ТОК</a></li>
+              <li class="nav_item2"><a class="a" href="physed">Физическая культура<a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
