@@ -47,6 +47,7 @@ urlpatterns = [
     path('facultatives/tok', views.faculties_13, name="ТОК"),
     path('facultatives/physed', views.faculties_14, name="Физическая культура"),
 
+    path('calendar/', views.calendar, name="Календарь"),
     path('calendar/vostok', views.calendar_1, name="События востоковедения"),
     path('calendar/gum', views.calendar_2, name="События гуманитарных наук"),
     path('calendar/design', views.calendar_3, name="События дизайна"),
