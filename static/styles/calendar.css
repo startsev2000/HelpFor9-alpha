@@ -129,13 +129,24 @@ li {
     background-size: 50px 50px;
 }
 
+.greeting {
+    height: 80px;
+    color: white;
+    text-align: center;
+    margin-top: 23px;
+}
+
+a {
+    color: black;
+}
+
 #calendar2 {
-    width: 40%;
+    width: 100%;
     font: monospace;
     line-height: 1.5em;
     font-size: 1.5vw;
     text-align: center;
-    margin-left: 5%;
+    margin-left: 20%;
     margin-top: 70px;
     background-color: #bc2f2f;
 }
@@ -164,4 +175,64 @@ li {
 #calendar2 tbody td.today {
     background: rgb(220, 0, 0);
     color: #fff;
+}
+
+.eventlist {
+    display: inline-block;
+    font-size: 1.5vw;
+    border-collapse: collapse;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 70px;
+    vertical-align: top;
+}
+
+.bodyt {
+    border-color: black;
+}
+
+.thl {
+    background: #F96A6A;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: solid #F96A6A 3px;
+    border-bottom: black;
+    border-right: 0;
+}
+
+.thl2 {
+    background: #F96A6A;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: solid rgb(0, 0, 0) 3px;
+    border-top: solid #F96A6A 3px;
+}
+
+.th3 {
+    background: #F96A6A;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: solid #F96A6A 3px;
+    border-bottom: black;
+}
+
+.thl3 {
+    background: #F96A6A;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: solid #F96A6A 3px;
+    border-bottom: black;
+}
+
+.th1, .td1 {
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+
+.calend {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
 }
