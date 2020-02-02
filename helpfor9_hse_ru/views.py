@@ -12,48 +12,48 @@ def calendar(request):
 
 
 def calculator(request):
-    return render(request, 'calculator.html')
+    return render(request, 'Calculator/calculator.html')
 
 
 def calculator_1(request):
-    return render(request, 'calculator.html')  # Востоковедение
+    return render(request, 'Calculator/calculator1.html')  # Востоковедение
 
 
 def calculator_2(request):
-    return render(request, 'calculator.html')  # Гуманитарные науки
+    return render(request, 'Calculator/calculator2.html')  # Гуманитарные науки
 
 
 def calculator_3(request):
-    return render(request, 'calculator.html')  # Дизайн
+    return render(request, 'Calculator/calculator3.html')  # Дизайн
 
 
 def calculator_4(request):
-    return render(request, 'calculator.html')  # Естественные науки
+    return render(request, 'Calculator/calculator4.html')  # Естественные науки
 
 
 def calculator_5(request):
-    return render(request, 'calculator.html')  # Математика
+    return render(request, 'Calculator/calculator5.html')  # Математика
 
 
 def calculator_6(request):
     # Информатика, инженерия и математика
-    return render(request, 'calculator.html')
+    return render(request, 'Calculator/calculator6.html')
 
 
 def calculator_7(request):
-    return render(request, 'calculator.html')  # Психология
+    return render(request, 'Calculator/calculator7.html')  # Психология
 
 
 def calculator_8(request):
-    return render(request, 'calculator.html')  # Экономика и математика
+    return render(request, 'Calculator/calculator8.html')  # Экономика и математика
 
 
 def calculator_9(request):
-    return render(request, 'calculator.html')  # Экономика и социальные науки
+    return render(request, 'Calculator/calculator9.html')  # Экономика и социальные науки
 
 
 def calculator_10(request):
-    return render(request, 'calculator.html')  # Юриспруденция
+    return render(request, 'Calculator/calculator10.html')  # Юриспруденция
 
 
 def info_1(request):
