@@ -1,59 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Календарь событий</title>
-	<link rel="stylesheet" href="/static/styles/eventCalendar.css">
-	<link rel="stylesheet" href="/static/styles/eventCalendar_theme_responsive.css">
+  <link rel="stylesheet" href="/static/styles/calendar.css" />
+  <script src="lib/script.js"></script>
 </head>
 
-<body>
+<body class="backg">
+  <header>
+    <div class="top">
+      <h2 class="greeting">Добро Пожаловать!</h2>
+    </div>
+    <div class="lycAvatar"></div>
+    <a href="/">
+      <div class="inf"></div>
+    </a>
+    <a href="/facultatives/">
+      <div class="fac"></div>
+    </a>
+    <a href="/calendar/">
+      <div class="cal"></div>
+    </a>
+    <a href="/calculator/">
+      <div class="clc"></div>
+    </a>
+  </header>
+  <main>
+    <div class="main">
+      <table id="calendar2">
+        <thead>
+          <tr>
+            <td>‹
+            <td colspan="5">
+            <td>›
+          <tr>
+            <td>Пн
+            <td>Вт
+            <td>Ср
+            <td>Чт
+            <td>Пт
+            <td>Сб
+            <td>Вс
+        <tbody>
+      </table>
+      <script>
+        function Calendar2(id, year, month) {
+          var Dlast = new Date(year, month + 1, 0).getDate(),
+            D = new Date(year, month, Dlast),
+            DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+            DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+            calendar = '<tr>',
+            month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+          if (DNfirst != 0) {
+            for (var i = 1; i < DNfirst; i++) calendar += '<td>';
+          } else {
+            for (var i = 0; i < 6; i++) calendar += '<td>';
+          }
+          for (var i = 1; i <= Dlast; i++) {
+            if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+              calendar += '<td class="today">' + i;
+            } else {
+              calendar += '<td>' + i;
+            }
+            if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+              calendar += '<tr>';
+            }
+          }
+          for (var i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+          document.querySelector('#' + id + ' tbody').innerHTML = calendar;
+          document.querySelector('#' + id + ' thead td:nth-child(2)').innerHTML = month[D.getMonth()] + ' ' + D.getFullYear();
+          document.querySelector('#' + id + ' thead td:nth-child(2)').dataset.month = D.getMonth();
+          document.querySelector('#' + id + ' thead td:nth-child(2)').dataset.year = D.getFullYear();
+          if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+            document.querySelector('#' + id + ' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+          }
+        }
+        Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+        // переключатель минус месяц
+        document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function () {
+          Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) - 1);
+        }
+        // переключатель плюс месяц
+        document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function () {
+          Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) + 1);
+        }
 
-	<div id="eventCalendar" style="width: 300px; margin: 50px auto;"></div>
-
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="/static/js/moment.js"></script>
-	<script src="/static/js/jquery.eventCalendar.js"></script>
-	<script>
-		$(function () {
-			var data = [
-				{ "date": "2017-04-21 10:15:20", "title": "Событие 1", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
-				{ "date": "2017-04-18 10:15:20", "title": "Событие 2", "description": "Lorem Ipsum dolor set", "url": "" },
-				{ "date": "2017-04-01 10:15:20", "title": "Событие 3", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
-				{ "date": "2017-04-25 10:15:20", "title": "Событие 4", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
-			];
-			$('#eventCalendar').eventCalendar({
-				jsonData: data,
-				eventsjson: 'data.json',
-				jsonDateFormat: 'human',
-				startWeekOnMonday: false,
-				openEventInNewWindow: true,
-				dateFormat: 'DD-MM-YYYY',
-				showDescription: false,
-				locales: {
-					locale: "ru",
-					txt_noEvents: "Нет запланированных событий",
-					txt_SpecificEvents_prev: "",
-					txt_SpecificEvents_after: "события:",
-					txt_NextEvents: "Следующие события:",
-					txt_GoToEventUrl: "Смотреть",
-					moment: {
-						"months": ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-							"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-						"monthsShort": ["Янв", "Фев", "Мар", "Апр", "Май", "Июн",
-							"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-						"weekdays": ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг",
-							"Пятница", "Суббота"],
-						"weekdaysShort": ["Вс", "Пн", "Вт", "Ср", "Чт",
-							"Пт", "Сб"],
-						"weekdaysMin": ["Вс", "Пн", "Вт", "Ср", "Чт",
-							"Пт", "Сб"]
-					}
-				}
-			});
-		});
-	</script>
-</body>
+      </script>
+    </div>
+  </main>
 
 </html>
