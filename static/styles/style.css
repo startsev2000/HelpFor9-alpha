@@ -136,10 +136,6 @@ li {
   margin-top: 23px;
 }
 
-a {
-  color: black;
-}
-
 .cont {
   width: 90%;
   margin-left: 7%;
@@ -253,7 +249,7 @@ a {
 .tex {
   display: inline-block;
   width: 100%;
-  background-color: #FBDACC;
+  background-color: #F5DBD2;
   margin-top: -11px;
   font-size: 1.1em;
   overflow-y: scroll;
