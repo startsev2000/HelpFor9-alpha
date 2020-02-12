@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'HelpFor9.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'HF9_accs',
-        'USER': 'postgres',
-        'PASSWORD': 'hselyceum',
-        'HOST': 'localhost',
+        'NAME': 'd2ehsmpiirqvrk',
+        'USER': 'eehmyghgdtzmfp',
+        'PASSWORD': '2fbb7d888001632c226f1108f3976b439977707002e59e5f6c9b755422c662b1',
+        'HOST': 'ec2-46-137-177-160.eu-west-1.compute.amazonaws.com',
         'PORT': '5432'
     }
 }
