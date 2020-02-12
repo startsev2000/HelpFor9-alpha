@@ -121,20 +121,20 @@ def info_10(request):
 
 
 def faculties(request):
-    return render(request, 'facultatives/facultatives.html')
+    return render(request, 'Facultatives/facultatives.html')
 
 
 def faculties_1(request):  # Востоковедение
 
     facultatives = Facultative.objects.all()
 
-    return render(request, 'facultatives/facultatives1.html', {'facultatives': facultatives})
+    return render(request, 'Facultatives/facultatives1.html', {'facultatives': facultatives})
 
 
 def faculties_2(request):  # Естественные науки
     facultatives = Facultative.objects.all()
 
-    return render(request, 'facultatives/facultatives2.html', {'facultatives': facultatives})
+    return render(request, 'Facultatives/facultatives2.html', {'facultatives': facultatives})
 
 
 def faculties_3(request):  # Иностранные языки
