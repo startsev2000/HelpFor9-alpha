@@ -12,11 +12,33 @@ def calendar(request):
 
 
 def calculator(request):
+    """
+    bal1 = int(request.POST.get('val1', False))
+    bal2 = int(request.POST.get('val2', False))
+    bal3 = int(request.POST.get('val3', False))
+    bal4 = int(request.POST.get('val4', False))
+    bal5 = int(request.POST.get('val5', False))
+    bal6 = int(request.POST.get('val6', False))
+    bal7 = int(request.POST.get('val7', False))
+    bal8 = int(request.POST.get('val8', False))
+    res = (bal1 + bal2 + bal3 + bal4 + bal5 + bal6 + bal7 + bal8) / 8
+    """
     return render(request, 'Calculator/calculator.html')
 
 
-def calculator_1(request):
-    return render(request, 'Calculator/calculator1.html')  # Востоковедение
+def calculator_1(request):  # Востоковедение
+    """
+    bal1 = int(request.POST['val1'])
+    bal2 = int(request.POST['val2'])
+    bal3 = int(request.POST['val3'])
+    bal4 = int(request.POST['val4'])
+    bal5 = int(request.POST['val5'])
+    bal6 = int(request.POST['val6'])
+    bal7 = int(request.POST['val7'])
+    bal8 = int(request.POST['val8'])
+    res = sum(bal1, bal2, bal3, bal4, bal5, bal6, bal7, bal8) / 8
+    """
+    return render(request, 'Calculator/calculator1.html')
 
 
 def calculator_2(request):
@@ -45,11 +67,13 @@ def calculator_7(request):
 
 
 def calculator_8(request):
-    return render(request, 'Calculator/calculator8.html')  # Экономика и математика
+    # Экономика и математика
+    return render(request, 'Calculator/calculator8.html')
 
 
 def calculator_9(request):
-    return render(request, 'Calculator/calculator9.html')  # Экономика и социальные науки
+    # Экономика и социальные науки
+    return render(request, 'Calculator/calculator9.html')
 
 
 def calculator_10(request):
