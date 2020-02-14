@@ -237,6 +237,24 @@ article {
   text-align: center;
 }
 
+body {
+  margin: 0;
+}
+
+.top {
+  z-index: 3;
+}
+
+.clc, .inf, .cal, .fac, .lycAvatar {
+  z-index: 5;
+}
+
+.main {
+  position: static;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+}
+
 @media only screen and (min-width: 1824px) {
   .main {
     position: fixed;

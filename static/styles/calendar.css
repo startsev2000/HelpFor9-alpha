@@ -44,38 +44,6 @@ html, body {
     background-size: 50px 50px;
 }
 
-.inf:hover {
-    width: 60px;
-    height: 80px;
-    top: 0;
-    background-image: url('/static/images/info_chosen.png');
-    background-size: 60px 80px;
-}
-
-.clc:hover {
-    width: 60px;
-    height: 80px;
-    top: 0;
-    background-image: url('/static/images/calculator_chosen.png');
-    background-size: 60px 80px;
-}
-
-.cal:hover {
-    width: 60px;
-    height: 80px;
-    top: 0;
-    background-image: url('/static/images/calendar_chosen.png');
-    background-size: 60px 80px;
-}
-
-.fac:hover {
-    width: 60px;
-    height: 80px;
-    top: 0;
-    background-image: url('/static/images/facultatives_chosen.png');
-    background-size: 60px 80px;
-}
-
 .main {
     position: fixed;
     top: 80px;
@@ -235,4 +203,54 @@ a {
     width: 40%;
     display: inline-block;
     vertical-align: top;
+}
+
+body {
+    margin: 0;
+}
+
+.top {
+    z-index: 3;
+}
+
+.clc, .inf, .cal, .fac, .lycAvatar {
+    z-index: 5;
+}
+
+.main {
+    position: static;
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+}
+
+@media only screen and (min-width: 1824px) {
+    .main {
+        position: fixed;
+        top: 80px;
+        width: 55%;
+        margin: auto;
+        background-color: white;
+        left: 22.5%;
+        bottom: 0;
+    }
+    .top {
+        width: 54.6%;
+        height: 80px;
+        left: 22.7%;
+    }
+    .lycAvatar {
+        left: 24%;
+    }
+    .inf {
+        right: 33%;
+    }
+    .fac {
+        right: 30%;
+    }
+    .clc {
+        right: 27%;
+    }
+    .cal {
+        right: 24%;
+    }
 }
