@@ -114,7 +114,7 @@ a {
     line-height: 1.5em;
     font-size: 1.5vw;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 30%;
     margin-top: 70px;
     background-color: #bc2f2f;
 }
@@ -150,10 +150,11 @@ a {
     font-size: 1.5vw;
     border-collapse: collapse;
     text-align: center;
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
     margin-top: 70px;
     vertical-align: top;
+    margin-left: 20%;
 }
 
 .bodyt {
@@ -167,6 +168,7 @@ a {
     border: solid #F96A6A 3px;
     border-bottom: black;
     border-right: 0;
+    border-color: #bc2f2f;
 }
 
 .thl2 {
@@ -175,6 +177,7 @@ a {
     padding: 10px 20px;
     border: solid rgb(0, 0, 0) 3px;
     border-top: solid #F96A6A 3px;
+    border-color: #bc2f2f;
 }
 
 .th3 {
@@ -183,6 +186,7 @@ a {
     padding: 10px 20px;
     border: solid #F96A6A 3px;
     border-bottom: black;
+    border-color: #bc2f2f;
 }
 
 .thl3 {
@@ -191,6 +195,7 @@ a {
     padding: 10px 20px;
     border: solid #F96A6A 3px;
     border-bottom: black;
+    border-color: #bc2f2f;
 }
 
 .th1, .td1 {
