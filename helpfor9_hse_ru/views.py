@@ -8,7 +8,9 @@ def index(request):
 
 
 def calendar(request):
-    return render(request, 'calendar.html')
+    events = Event.objects.all()
+
+    return render(request, 'calendar.html', {'events': events})
 
 
 def calculator(request):

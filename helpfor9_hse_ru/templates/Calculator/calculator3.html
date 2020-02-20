@@ -10,37 +10,37 @@
 <body class="backg">
     <header>
         <div class="top">
-            <h2 class="greeting">Калькулятор</h2>
+          <h2 class="greeting">Добро пожаловать!</h2>
         </div>
         <div class="lycAvatar"></div>
         <a href="/">
-            <div class="inf"></div>
+          <div class="inf" title="Информация о направлениях"></div>
         </a>
         <a href="/facultatives/">
-            <div class="fac"></div>
+          <div class="fac" title="Список факультативов"></div>
         </a>
         <a href="/calendar/">
-            <div class="cal"></div>
+          <div class="cal" title="Календарь событий"></div>
         </a>
         <a href="/calculator/">
-            <div class="clc"></div>
+          <div class="clc" title="Калькулятор среднего балла"></div>
         </a>
-    </header>
+      </header>
     <main>
         <div class="main">
             <div class="choice">
-                <select>
-                    <option value="0">Выберите направление</option>
-                    <option value="1">Востоковедение</option>
-                    <option value="2">Гуманитарные науки</option>
-                    <option value="3">Дизайн</option>
-                    <option value="4">Естественные науки</option>
-                    <option value="5">Математика</option>
-                    <option value="6">Информатика, инженерия и математика</option>
-                    <option value="7">Психология</option>
-                    <option value="8">Экономика и математика</option>
-                    <option value="9">Экономика и социальные науки</option>
-                    <option value="10">Юриспруденция</option>
+                <select onchange="window.location.href=this.options[this.selectedIndex].value">
+                    <option value="vostok">Выберите направление</option>
+                    <option value="vostok">Востоковедение</option>
+                    <option value="gum">Гуманитарные науки</option>
+                    <option value="design">Дизайн</option>
+                    <option value="natscience">Естественные науки</option>
+                    <option value="math">Математика</option>
+                    <option value="infomath">Информатика, инженерия и математика</option>
+                    <option value="psychology">Психология</option>
+                    <option value="matheconom">Экономика и математика</option>
+                    <option value="soceconom">Экономика и социальные науки</option>
+                    <option value="yurispr">Юриспруденция</option>
                 </select>
             </div>
 
@@ -50,7 +50,7 @@
                     <div class="col12">Русский язык</div>
                     <div class="col1">История</div>
                     <div class="col1">Литература</div>
-                    <div class="col1"></div>
+                    <div class="col1">-</div>
                 </div>
                 <div class="row2">
                     <div class="col22">
