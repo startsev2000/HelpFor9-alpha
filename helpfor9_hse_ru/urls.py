@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
 
-
 from helpfor9_hse_ru import views
 
 urlpatterns = [
@@ -31,22 +30,7 @@ urlpatterns = [
     path('yurispr', views.info_10, name="Юриспруденция"),
 
     path('facultatives/', views.faculties, name="Список факультативов"),
-    path('facultatives/vostok', views.faculties_1, name="Востоковедение"),
-    path('facultatives/natscience', views.faculties_2, name="Естественные науки"),
-    path('facultatives/foreign', views.faculties_3, name="Иностранные языки"),
-    path('facultatives/computers', views.faculties_4, name="Информатика"),
-    path('facultatives/research', views.faculties_5,
-         name="Исследовательская и проектная деятельность"),
-    path('facultatives/history', views.faculties_6, name="История"),
-    path('facultatives/culthist', views.faculties_7, name="История культуры"),
-    path('facultatives/math', views.faculties_8, name="Математика"),
-    path('facultatives/mhk', views.faculties_9, name="МХК"),
-    path('facultatives/social', views.faculties_10, name="Общественные науки"),
-    path('facultatives/psychology', views.faculties_11, name="Психология"),
-    path('facultatives/words', views.faculties_12, name="Словесность"),
-    path('facultatives/tok', views.faculties_13, name="ТОК"),
-    path('facultatives/physed', views.faculties_14, name="Физическая культура"),
-
+    path('facultatives/<str:facultative>', views.faculties_1),
     path('calendar/', views.calendar, name="Календарь"),
     path('calendar/vostok', views.calendar_1, name="События востоковедения"),
     path('calendar/gum', views.calendar_2, name="События гуманитарных наук"),

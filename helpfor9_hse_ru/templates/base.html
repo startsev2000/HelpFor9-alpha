@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="/static/styles/fac0.css"/>
+    <script src="lib/script.js"></script>
+    <title>Список факультативов</title>
+</head>
+
+<body class="backg">
+<header>
+    <div class="top">
+        <h2 class="greeting">Добро пожаловать!</h2>
+    </div>
+    <div class="lycAvatar"></div>
+    <nav>
+        <a href="/">
+            <div class="inf" title="Информация о направлениях"></div>
+        </a>
+        <a href="/facultatives/">
+            <div class="fac" title="Список факультативов"></div>
+        </a>
+        <a href="/calendar/">
+            <div class="cal" title="Календарь событий"></div>
+        </a>
+        <a href="/calculator/">
+            <div class="clc" title="Калькулятор среднего балла"></div>
+        </a>
+    </nav>
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

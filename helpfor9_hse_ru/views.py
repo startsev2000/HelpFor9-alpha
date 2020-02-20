@@ -2,6 +2,26 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Event, Facultative
 
+facultatives = {'vostok': 'Востоковедение',
+                'natscience': 'Естественные науки',
+                'foreign': 'Иностранные языки',
+                'computers': 'Информатика',
+                'research': 'Исследование и проекты',
+                'history': 'История',
+                'culthist': 'История культуры',
+                'math': 'Математика',
+                'mhk': 'МХК',
+                'social': 'Общественные науки',
+                'psychology': 'Психология',
+                'words': 'Словесность',
+                'tok': 'ТОК',
+                'physed': 'Физическая культура',
+                }
+
+
+def get_base_context(request):
+    return {'title': 'HelpFor9'}
+
 
 def index(request):
     return render(request, 'index.html')
@@ -14,32 +34,11 @@ def calendar(request):
 
 
 def calculator(request):
-    """
-    bal1 = int(request.POST.get('val1', False))
-    bal2 = int(request.POST.get('val2', False))
-    bal3 = int(request.POST.get('val3', False))
-    bal4 = int(request.POST.get('val4', False))
-    bal5 = int(request.POST.get('val5', False))
-    bal6 = int(request.POST.get('val6', False))
-    bal7 = int(request.POST.get('val7', False))
-    bal8 = int(request.POST.get('val8', False))
-    res = (bal1 + bal2 + bal3 + bal4 + bal5 + bal6 + bal7 + bal8) / 8
-    """
     return render(request, 'Calculator/calculator.html')
 
 
 def calculator_1(request):  # Востоковедение
-    """
-    bal1 = int(request.POST['val1'])
-    bal2 = int(request.POST['val2'])
-    bal3 = int(request.POST['val3'])
-    bal4 = int(request.POST['val4'])
-    bal5 = int(request.POST['val5'])
-    bal6 = int(request.POST['val6'])
-    bal7 = int(request.POST['val7'])
-    bal8 = int(request.POST['val8'])
-    res = sum(bal1, bal2, bal3, bal4, bal5, bal6, bal7, bal8) / 8
-    """
+
     return render(request, 'Calculator/calculator1.html')
 
 
@@ -123,92 +122,17 @@ def info_10(request):
 
 
 def faculties(request):
-    return render(request, 'Facultatives/facultatives.html')
+    context = get_base_context(request)
+    context.update({'list_facs': facultatives.items()})
+
+    return render(request, 'Facultatives/facultatives.html', context)
 
 
-def faculties_1(request):  # Востоковедение
-
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives1.html', {'facultatives': facultatives})
-
-
-def faculties_2(request):  # Естественные науки
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives2.html', {'facultatives': facultatives})
-
-
-def faculties_3(request):  # Иностранные языки
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives3.html', {'facultatives': facultatives})
-
-
-def faculties_4(request):  # Информатика
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives4.html', {'facultatives': facultatives})
-
-
-def faculties_5(request):  # Исследовательская и проектная деятельность учащихся
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives5.html', {'facultatives': facultatives})
-
-
-def faculties_6(request):  # История
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives6.html', {'facultatives': facultatives})
-
-
-def faculties_7(request):  # История культуры
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives7.html', {'facultatives': facultatives})
-
-
-def faculties_8(request):  # Математика
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives8.html', {'facultatives': facultatives})
-
-
-def faculties_9(request):  # МХК
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives9.html', {'facultatives': facultatives})
-
-
-def faculties_10(request):  # Общественные науки
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives10.html', {'facultatives': facultatives})
-
-
-def faculties_11(request):  # Психология
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives11.html', {'facultatives': facultatives})
-
-
-def faculties_12(request):  # Словесность
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives12.html', {'facultatives': facultatives})
-
-
-def faculties_13(request):  # ТОК
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives13.html', {'facultatives': facultatives})
-
-
-def faculties_14(request):  # Физическая культура
-    facultatives = Facultative.objects.all()
-
-    return render(request, 'Facultatives/facultatives14.html', {'facultatives': facultatives})
+def faculties_1(request, facultative):  # Востоковедение
+    context = get_base_context(request)
+    context.update({'list_facs': facultatives.items()})
+    context.update({'facultatives': Facultative.objects.filter(department=facultatives[facultative])})
+    return render(request, 'Facultatives/facultatives1.html', context)
 
 
 def calendar_1(request):

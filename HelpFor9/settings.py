@@ -15,18 +15,15 @@ import posixpath
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'kwldb%t9yu==mf+kvc1)b1ndxth&sdvuozc$hprh@&m+0hr2pm'
 
-
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['/']
 
 # Application definition
 
@@ -71,18 +68,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'HelpFor9.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2ehsmpiirqvrk',
-        'USER': 'eehmyghgdtzmfp',
-        'PASSWORD': '2fbb7d888001632c226f1108f3976b439977707002e59e5f6c9b755422c662b1',
-        'HOST': 'ec2-46-137-177-160.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432'
+        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3'
     }
 }
 
@@ -104,7 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -117,7 +108,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
