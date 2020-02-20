@@ -135,41 +135,6 @@ def faculties_1(request, facultative):  # Востоковедение
     return render(request, 'Facultatives/facultatives1.html', context)
 
 
-def calendar_1(request):
+def calendar(request):
     return render(request, 'calendar.html')
 
-
-def calendar_2(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_3(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_4(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_5(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_6(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_7(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_8(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_9(request):
-    return render(request, 'calendar.html')
-
-
-def calendar_10(request):
-    return render(request, 'calendar.html')

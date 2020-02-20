@@ -32,16 +32,6 @@ urlpatterns = [
     path('facultatives/', views.faculties, name="Список факультативов"),
     path('facultatives/<str:facultative>', views.faculties_1),
     path('calendar/', views.calendar, name="Календарь"),
-    path('calendar/vostok', views.calendar_1, name="События востоковедения"),
-    path('calendar/gum', views.calendar_2, name="События гуманитарных наук"),
-    path('calendar/design', views.calendar_3, name="События дизайна"),
-    path('calendar/natscience', views.calendar_4,
-         name="События естественных наук"),
-    path('calendar/math', views.calendar_5, name="События математики"),
-    path('calendar/infomath', views.calendar_6, name="События матинфо"),
-    path('calendar/psychology', views.calendar_7, name="События психологии"),
-    path('calendar/matheconom', views.calendar_8, name="События матэка"),
-    path('calendar/soceconom', views.calendar_9, name="События соцэка"),
-    path('calendar/yurispr', views.calendar_10, name="События юриспруденции"),
+
 
 ]
