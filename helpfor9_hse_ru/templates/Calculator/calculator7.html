@@ -5,6 +5,7 @@
     <head>
         <link rel="stylesheet" href="/static/styles/calc1.css">
         <title>Калькулятор</title>
+        <script src="/static/js/calc6.js" defer></script>
     </head>
 
 <body class="backg">
@@ -56,27 +57,28 @@
                     <div class="col22">
                         <p>1 семестр</p>
                     </div>
-                    <div class="col2"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
+                    <div class="col2"><input class="bbb" type="text" id="n1"></input></div>
+                    <div class="col23"><input class="bbb" type="text" id="n2"></input></div>
+                    <div class="col23"><input class="bbb" type="text" id="n3"></input></div>
+                    <div class="col23"><div class="bbb"></div></div>
                 </div>
                 <div class="row3">
                     <div class="col32">
                         <p>2 семестр</p>
                     </div>
-                    <div class="col2"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
-                    <div class="col23"><input class="bbb"></input></div>
+                    <div class="col2"><input class="bbb" type="text" id="n4"></input></div>
+                    <div class="col23"><input class="bbb" type="text" id="n5"></input></div>
+                    <div class="col23"><input class="bbb" type="text" id="n6"></input></div>
+                    <div class="col23"><div class="bbb"></div></div>
                 </div>
                 <div class="parent2"></div>
-                <div class="parent3">
+                <div class="parent3" onclick="count()">
                     <div></div>
                     <div></div>
                 </div>
                 <div class="parent4"></div>
-                <div class="parent5"><input class="aaa"></input>
+                <div class="parent5">
+                    <div id="out" class="aaa"></div>
                 </div>
             </div>
         </div>

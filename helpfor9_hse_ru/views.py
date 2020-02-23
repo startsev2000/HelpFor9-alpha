@@ -131,10 +131,10 @@ def faculties(request):
 def faculties_1(request, facultative):  # Востоковедение
     context = get_base_context(request)
     context.update({'list_facs': facultatives.items()})
-    context.update({'facultatives': Facultative.objects.filter(department=facultatives[facultative])})
+    context.update({'facultatives': Facultative.objects.filter(
+        department=facultatives[facultative])})
     return render(request, 'Facultatives/facultatives1.html', context)
 
 
 def calendar(request):
     return render(request, 'calendar.html')
-
