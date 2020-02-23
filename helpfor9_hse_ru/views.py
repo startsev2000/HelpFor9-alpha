@@ -134,7 +134,3 @@ def faculties_1(request, facultative):  # Востоковедение
     context.update({'facultatives': Facultative.objects.filter(
         department=facultatives[facultative])})
     return render(request, 'Facultatives/facultatives1.html', context)
-
-
-def calendar(request):
-    return render(request, 'calendar.html')
