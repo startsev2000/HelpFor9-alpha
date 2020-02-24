@@ -37,11 +37,15 @@
             <th class="tk">Время, кабинет</th>
             <th class="pr">Преподаватель</th>
           </tr>
+          {% for facultative in facultatives %}
           <tr>
-            <td>Выбери кафедру справа</td>
-            <td>Узнай, где и когда проходит факультатив</td>
-            <td>И кто преподает</td>
+            {% if facultative.department == "МХК"%}
+            <td>{{facultative.name}}</td>
+            <td>{{facultative.info}}</td>
+            <td>{{facultative.teacher}}</td>
+            {% endif %}
           </tr>
+          {% endfor%}
         </table>
 
         <div class="list">
@@ -73,7 +77,7 @@
                 <li class="nav_item">Математика</li>
               </a>
               <a class="a" href="mhk">
-                <li class="nav_item">МХК</li>
+                <li class="nav_item3">МХК</li>
               </a>
               <a class="a" href="social">
                 <li class="nav_item2">Общественные науки</li>

@@ -2,27 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Event, Facultative
 
-facultatives = {'vostok': 'Востоковедение',
-                'natscience': 'Естественные науки',
-                'foreign': 'Иностранные языки',
-                'computers': 'Информатика',
-                'research': 'Исследование и проекты',
-                'history': 'История',
-                'culthist': 'История культуры',
-                'math': 'Математика',
-                'mhk': 'МХК',
-                'social': 'Общественные науки',
-                'psychology': 'Психология',
-                'words': 'Словесность',
-                'tok': 'ТОК',
-                'physed': 'Физическая культура',
-                }
-
-
-def get_base_context(request):
-    return {'title': 'HelpFor9'}
-
-
 def index(request):
     return render(request, 'index.html')
 
@@ -120,17 +99,93 @@ def info_9(request):
 def info_10(request):
     return render(request, 'info10.html')
 
+def faculties(request):  # Востоковедение
 
-def faculties(request):
-    context = get_base_context(request)
-    context.update({'list_facs': facultatives.items()})
+    facultatives = Facultative.objects.all()
 
-    return render(request, 'Facultatives/facultatives.html', context)
+    return render(request, 'Facultatives/facultatives.html', {'facultatives': facultatives})
 
 
-def faculties_1(request, facultative):  # Востоковедение
-    context = get_base_context(request)
-    context.update({'list_facs': facultatives.items()})
-    context.update({'facultatives': Facultative.objects.filter(
-        department=facultatives[facultative])})
-    return render(request, 'Facultatives/facultatives1.html', context)
+def faculties_1(request):  # Востоковедение
+
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives1.html', {'facultatives': facultatives})
+
+
+def faculties_2(request):  # Естественные науки
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives2.html', {'facultatives': facultatives})
+
+
+def faculties_3(request):  # Иностранные языки
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives3.html', {'facultatives': facultatives})
+
+
+def faculties_4(request):  # Информатика
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives4.html', {'facultatives': facultatives})
+
+
+def faculties_5(request):  # Исследовательская и проектная деятельность учащихся
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives5.html', {'facultatives': facultatives})
+
+
+def faculties_6(request):  # История
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives6.html', {'facultatives': facultatives})
+
+
+def faculties_7(request):  # История культуры
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives7.html', {'facultatives': facultatives})
+
+
+def faculties_8(request):  # Математика
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives8.html', {'facultatives': facultatives})
+
+
+def faculties_9(request):  # МХК
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives9.html', {'facultatives': facultatives})
+
+
+def faculties_10(request):  # Общественные науки
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives10.html', {'facultatives': facultatives})
+
+
+def faculties_11(request):  # Психология
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives11.html', {'facultatives': facultatives})
+
+
+def faculties_12(request):  # Словесность
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives12.html', {'facultatives': facultatives})
+
+
+def faculties_13(request):  # ТОК
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives13.html', {'facultatives': facultatives})
+
+
+def faculties_14(request):  # Физическая культура
+    facultatives = Facultative.objects.all()
+
+    return render(request, 'Facultatives/facultatives14.html', {'facultatives': facultatives})
