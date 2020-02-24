@@ -1,81 +1,112 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div class="main">
-        <div class="cont">
-            <div class="logot"></div>
-            <div class="texlog">
-                <div class="logot2"></div>
-                <div class="tex">
-                    <section>
-                        <h1 class="allign">Футуритет</h1>
-                        <article>
-                            <p>
-                                Привет, девятиклассник!
-                            </p>
-                        </article>
-                        <article>
-                            <p>
-                                Будущее и время – вот чем ты управляешь, поэтому направление и назвали «Футуритеt».
-                                Сейчас ты находишься на отправной точке, впереди десять дорог, десять вариантов
-                                обучения. Тебе
-                                предстоит нелегкий выбор, и мы хотим помочь.
-                            </p>
-                        </article>
-                        <article>
-                            Искренне ваш, первый выпуск Футуритета
-                        </article>
-                        <article>
-                            <p>
-                                Если у вас есть предложения или вы хотите присоединиться к команде разработчиков, пишите
-                                <a href="https://vk.com/vahmobilist">сюда</a>.
-                            </p>
-                        </article>
-                        <article>
-                            <h3>
-                                руководитель направления: Подкопаев Денис Сергеевич
-                            </h3>
-                        </article>
-                    </section>
-                </div>
-            </div>
-            <div class="list">
-                <nav class="nav">
-                    <ul class="nav_list">
-                        <li class="item1">Выберите направление</li>
-                        <a class="a" href="vostok">
-                            <li class="nav_item">Востоковедение</li>
-                        </a>
-                        <a class="a" href="gum">
-                            <li class="nav_item">Гуманитарные науки</li>
-                        </a>
-                        <a class="a" href="design">
-                            <li class="nav_item">Дизайн</li>
-                        </a>
-                        <a class="a" href="natscience">
-                            <li class="nav_item">Естественные науки</li>
-                        </a>
-                        <a class="a" href="math">
-                            <li class="nav_item"> Математика</li>
-                        </a>
-                        <a class="a" href="infomath">
-                            <li class="nav_item">Информатика и математика</li>
-                        </a>
-                        <a class="a" href="psychology">
-                            <li class="nav_item">Психология</li>
-                        </a>
-                        <a class="a" href="matheconom">
-                            <li class="nav_item">Экономика и математика</li>
-                        </a>
-                        <a class="a" href="soceconom">
-                            <li class="nav_item">Экономика и социальные науки</li>
-                        </a>
-                        <a class="a" href="yurispr">
-                            <li class="nav_item2">Юриспруденция</li>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
 
-{% endblock %}
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" href="/static/styles/style.css" />
+  <script src="lib/script.js"></script>
+  <title>Футуритет</title>
+</head>
+
+<body class="backg">
+  <header>
+    <div class="top">
+      <h2 class="greeting">Добро пожаловать!</h2>
+    </div>
+    <div class="lycAvatar"></div>
+    <a href="/">
+      <div class="inf" title="Информация о направлениях"></div>
+    </a>
+    <a href="/facultatives/">
+      <div class="fac" title="Список факультативов"></div>
+    </a>
+    <a href="/calendar/">
+      <div class="cal" title="Календарь событий"></div>
+    </a>
+    <a href="/calculator/">
+      <div class="clc" title="Калькулятор среднего балла"></div>
+    </a>
+  </header>
+  <main>
+    <div class="main">
+      <div class="cont">
+        <div class="logot"></div>
+        <div class="texlog">
+          <div class="logot2"></div>
+          <div class="tex">
+            <section>
+                <h1 class="allign">Футуритет</h1>
+                <article>
+                    <p>
+                        Привет, девятиклассник!
+                    </p>
+                </article>
+                <article>
+                    <p>
+                        Будущее и время – вот чем ты управляешь, поэтому направление и назвали «Футуритеt».
+                        Сейчас ты находишься на отправной точке, впереди десять дорог, десять вариантов
+                        обучения. Тебе
+                        предстоит нелегкий выбор, и мы хотим помочь.
+                    </p>
+                </article>
+                <article>
+                    Искренне ваш, первый выпуск Футуритета
+                </article>
+                <article>
+                    <p>
+                        Если у вас есть предложения или вы хотите присоединиться к команде разработчиков, пишите
+                        <a href="https://vk.com/vahmobilist">сюда</a>.
+                    </p>
+                </article>
+                <article>
+                    <h3>
+                        руководитель направления: Подкопаев Денис Сергеевич
+                    </h3>
+                </article>
+            </section>
+          </div>
+        </div>
+        <div class="list">
+          <nav class="nav">
+            <ul class="nav_list">
+              <li class="item1">Выберите направление</li>
+              <a class="a" href="vostok">
+                <li class="nav_item3">Востоковедение</li>
+              </a>
+              <a class="a" href="gum">
+                <li class="nav_item">Гуманитарные науки</li>
+              </a>
+              <a class="a" href="design">
+                <li class="nav_item">Дизайн</li>
+              </a>
+              <a class="a" href="natscience">
+                <li class="nav_item">Естественные науки</li>
+              </a>
+              <a class="a" href="math">
+                <li class="nav_item"> Математика</li>
+              </a>
+              <a class="a" href="infomath">
+                <li class="nav_item">Информатика и математика</li>
+              </a>
+              <a class="a" href="psychology">
+                <li class="nav_item">Психология</li>
+              </a>
+              <a class="a" href="matheconom">
+                <li class="nav_item">Экономика и математика</li>
+              </a>
+              <a class="a" href="soceconom">
+                <li class="nav_item">Экономика и социальные науки</li>
+              </a>
+              <a class="a" href="yurispr">
+                <li class="nav_item2">Юриспруденция</li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
