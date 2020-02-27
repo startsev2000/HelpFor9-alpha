@@ -79,7 +79,6 @@ DATABASES = {
         'USER': 'eehmyghgdtzmfp',
         'PORT': '5432',
         'PASSWORD': '2fbb7d888001632c226f1108f3976b439977707002e59e5f6c9b755422c662b1',
-
     }
 }
 
