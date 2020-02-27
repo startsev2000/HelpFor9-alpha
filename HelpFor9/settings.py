@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'HelpFor9.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-"""
+
 DATABASES = {
     'default': {
         'NAME': 'd2ehsmpiirqvrk',
@@ -82,17 +82,7 @@ DATABASES = {
         'PASSWORD': '2fbb7d888001632c226f1108f3976b439977707002e59e5f6c9b755422c662b1',
     }
 }
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'HF9_accs',
-        'USER': 'postgres',
-        'PASSWORD': 'hselyceum',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
